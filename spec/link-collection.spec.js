@@ -40,4 +40,12 @@ describe('LinkCollection', function () {
     expect(() => { collection.convert('') }).to.throw(Error)
     expect(collection.getReferences()).to.eql([])
   })
+
+  it('allows references to be added to the database on construction', function () {
+    collection = new LinkCollection([['baz', 'bar']])
+
+    expect(collection.convert('[foo](bar)')).to.equal('[foo][baz]')
+    expect(collection.convert('[bar](bar)')).to.equal('[bar][baz]')
+    expect(collection.getReferences()).to.eql(['[baz]: bar'])
+  })
 })
