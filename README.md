@@ -9,6 +9,8 @@ A collection of simple utilities for working with Markdown files.
 
 ## Utilities
 
+Because no keybindings are created for any of these out of the box, each utility is identified only by its command name. The command name is listed at the top of the description of what the utility does.
+
 ### Convert Inline Links into Reference Links
 
 **Command:** `markdown-utilities:convert-links`
