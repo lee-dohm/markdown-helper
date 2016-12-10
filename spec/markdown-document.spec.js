@@ -37,6 +37,13 @@ describe('MarkdownDocument', function () {
       expect(refs[0][0]).to.equal('with-inline-link')
       expect(refs[0][1]).to.equal('http://example.com')
     })
+
+    it('returns the list of lines that have reference definitions', function () {
+      let [_, lines] = doc.getReferences()
+
+      expect(lines.length).to.equal(1)
+      expect(lines[0]).to.equal(4)
+    })
   })
 
   describe('converting inline links to reference links', function () {
