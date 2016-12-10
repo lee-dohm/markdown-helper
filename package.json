@@ -1,5 +1,6 @@
 {
   "name": "markdown-utilities",
+  "author": "Lee Dohm <lee@lee-dohm.com>",
   "main": "./lib/main",
   "version": "0.0.0",
   "description": "A collection of utilities for working with Markdown files",
