@@ -21,9 +21,45 @@ describe('MarkdownDocument', function () {
     })
   })
 
-  describe('converting inline links to reference links', function () {
+  describe('getReferences', function () {
     beforeEach(function (done) {
-      atom.workspace.open(fixturePath('simple-before.md')).then((e) => {
+      atom.workspace.open(fixturePath('already-has-links-before.md')).then((e) => {
+        editor = e
+        doc = new MarkdownDocument(editor)
+        done()
+      })
+    })
+
+    it('finds all of the reference definitions', function () {
+      let [refs, _] = doc.getReferences()
+
+      expect(refs.length).to.equal(1)
+      expect(refs[0][0]).to.equal('with-inline-link')
+      expect(refs[0][1]).to.equal('http://example.com')
+    })
+  })
+
+  describe('converting inline links to reference links', function () {
+    describe('in a simple document', function () {
+      beforeEach(function (done) {
+        atom.workspace.open(fixturePath('simple-before.md')).then((e) => {
+          editor = e
+          doc = new MarkdownDocument(editor)
+          done()
+        })
+      })
+
+      it('works', function () {
+        doc.convertToReferenceLinks()
+
+        expect(editor.getText()).to.equal(fixture('simple-after.md'))
+      })
+    })
+  })
+
+  describe('in a document that already has links', function () {
+    beforeEach(function (done) {
+      atom.workspace.open(fixturePath('already-has-links-before.md')).then((e) => {
         editor = e
         doc = new MarkdownDocument(editor)
         done()
@@ -33,7 +69,7 @@ describe('MarkdownDocument', function () {
     it('works', function () {
       doc.convertToReferenceLinks()
 
-      expect(editor.getText()).to.equal(fixture('simple-after.md'))
+      expect(editor.getText()).to.equal(fixture('already-has-links-after.md'))
     })
   })
 })
