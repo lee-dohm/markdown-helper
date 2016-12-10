@@ -1,14 +1,15 @@
 {
-  "name": "markdown-utilities",
+  "name": "markdown-helper",
   "author": "Lee Dohm <lee@lee-dohm.com>",
   "main": "./lib/main",
   "version": "0.0.0",
   "description": "A collection of utilities for working with Markdown files",
   "keywords": [
     "markdown",
+    "helper",
     "utilities"
   ],
-  "repository": "https://github.com/lee-dohm/markdown-utilities",
+  "repository": "https://github.com/lee-dohm/markdown-helper",
   "license": "MIT",
   "engines": {
     "atom": ">=1.12.0 <2.0.0"
