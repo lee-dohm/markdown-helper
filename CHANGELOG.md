@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## **master** &mdash; *Unreleased*
+
+### Added
+
+* Add `markdown-helper:tidy` function to clean up multiple blank lines
+
 ## **v0.1.0** &mdash; *Released: 2016-12-10*
 
 ### Added

@@ -16,6 +16,12 @@ Because no keybindings are created for any of these out of the box, each utility
 
 In Markdown, there are two ways to type links into a document: inline links and reference links. Inline links include the URL immediately after the link text and reference links refer to the URL in another location in the document. Reference links generally keep the document tidier, but they are harder to keep track of. This utility allows one to type in the links in the inline format and then automatically generate the reference format from them.
 
+### Tidy Up By Deleting Repeated Blank Lines
+
+**Command:** `markdown-helper:tidy`
+
+I like to have single blank lines between blocks of text in Markdown. Having more than one blank line can be distracting. This cleans up any series of more than one blank line.
+
 ## Copyright
 
 Copyright &copy; 2016 by [Lee Dohm](http://www.lee-dohm.com). See [LICENSE](https://raw.githubusercontent.com/lee-dohm/package-name/master/LICENSE.md) for details.
