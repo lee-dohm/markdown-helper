@@ -13,7 +13,7 @@ Because no keybindings are created for any of these out of the box, each utility
 
 ### Convert Inline Links into Reference Links
 
-**Command:** `markdown-utilities:convert-links`
+**Command:** `markdown-utilities:convert-to-reference-links`
 
 In Markdown, there are two ways to type links into a document: inline links and reference links. Inline links include the URL immediately after the link text and reference links refer to the URL in another location in the document. Reference links generally keep the document tidier, but they are harder to keep track of. This utility allows one to type in the links in the inline format and then automatically generate the reference format from them.
 
