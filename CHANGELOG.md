@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## **master** &mdash; *Unreleased*
+
+### Fixed
+
+* Use `activationCommands` to speed startup
+
 ## **v0.2.0** &mdash; *Released: 2016-12-10*
 
 ### Added

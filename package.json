@@ -14,6 +14,9 @@
   "engines": {
     "atom": ">=1.12.0 <2.0.0"
   },
+  "activationCommands": {
+    "atom-text-editor": ["markdown-helper:convert-to-reference-links", "markdown-helper:tidy"]
+  },
   "devDependencies": {
     "atom-mocha-test-runner": "0.2.1",
     "chai": "^3.5.0"
