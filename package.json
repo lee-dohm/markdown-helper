@@ -5,6 +5,8 @@
   "version": "0.0.0",
   "description": "A collection of utilities for working with Markdown files",
   "keywords": [
+    "markdown",
+    "utilities"
   ],
   "repository": "https://github.com/lee-dohm/markdown-utilities",
   "license": "MIT",
