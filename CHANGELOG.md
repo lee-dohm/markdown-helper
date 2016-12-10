@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## **master** &mdash; *Unreleased*
+## **v0.2.1** &mdash; *Released: 2016-12-10*
 
 ### Fixed
 
