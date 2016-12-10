@@ -97,4 +97,20 @@ describe('MarkdownDocument', function () {
       expect(editor.getText()).to.equal(fixture('already-has-links-after.md'))
     })
   })
+
+  describe('tidy', function () {
+    beforeEach(function (done) {
+      atom.workspace.open(fixturePath('tidy-before.md')).then((e) => {
+        editor = e
+        doc = new MarkdownDocument(editor)
+        done()
+      })
+    })
+
+    it('deletes repeated blank lines', function () {
+      doc.tidy()
+
+      expect(editor.getText()).to.equal(fixture('tidy-after.md'))
+    })
+  })
 })
