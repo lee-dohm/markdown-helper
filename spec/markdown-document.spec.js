@@ -21,6 +21,24 @@ describe('MarkdownDocument', function () {
     })
   })
 
+  describe('extractReferences', function () {
+    beforeEach(function (done) {
+      atom.workspace.open(fixturePath('extract-links.md')).then((e) => {
+        editor = e
+        doc = new MarkdownDocument(editor)
+        done()
+      })
+    })
+
+    it('finds all of the reference definitions', function () {
+      let refs = doc.extractReferences()
+
+      expect(refs.length).to.equal(1)
+      expect(refs[0][0]).to.equal('with-inline-link')
+      expect(refs[0][1]).to.equal('http://example.com')
+    })
+  })
+
   describe('getReferences', function () {
     beforeEach(function (done) {
       atom.workspace.open(fixturePath('already-has-links-before.md')).then((e) => {
