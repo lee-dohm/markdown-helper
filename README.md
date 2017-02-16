@@ -30,4 +30,4 @@ I like to have single blank lines between blocks of text in Markdown. Having mor
 
 ## Copyright
 
-Copyright &copy; 2016 by [Lee Dohm](http://www.lee-dohm.com). See [LICENSE](https://raw.githubusercontent.com/lee-dohm/package-name/master/LICENSE.md) for details.
+Copyright &copy; 2016-2017 by [Lee Dohm](http://www.lee-dohm.com). See [LICENSE](https://raw.githubusercontent.com/lee-dohm/package-name/master/LICENSE.md) for details.
