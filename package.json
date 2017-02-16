@@ -17,6 +17,7 @@
   "activationCommands": {
     "atom-text-editor": [
       "markdown-helper:convert-to-reference-links",
+      "markdown-helper:insert-link",
       "markdown-helper:tidy"
     ]
   },
@@ -24,5 +25,8 @@
     "atom-mocha-test-runner": "0.2.1",
     "chai": "^3.5.0"
   },
-  "atomTestRunner": "./spec/runner"
+  "atomTestRunner": "./spec/runner",
+  "dependencies": {
+    "etch": "^0.8.0"
+  }
 }
